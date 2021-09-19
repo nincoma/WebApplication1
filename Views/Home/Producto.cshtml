@@ -1,0 +1,42 @@
+﻿@model SuperDrogueriaFenix.Models.Producto;
+<!--Referenciamos el modelo a utilizar-->
+@{
+    ViewData["Title"] = "Seccion Productos";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<!--Formulario de Registro-->
+<section class="content jumbotron">
+    <!--Actions, Controlador, Metodo de envio formulario-->
+    @using (Html.BeginForm("Producto", "Home", FormMethod.Post))
+    {
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Codigo, "Cordigo")
+            @Html.TextBoxFor(m => m.Codigo, new { @class = "form-control", placeholder = "Codigo Producto" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ValorCodigo, "Valor")
+            @Html.TextBoxFor(m => m.ValorCodigo, new { @class = "form-control", placeholder = "Valor" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Nombre, "Nombre")
+            <!--Valida que sea correo y tenga arroba-->
+            @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control", placeholder = "Nombre" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.IdCategoria, "Id Categoria")
+            <!--Valida que sea correo y tenga arroba-->
+            @Html.TextBoxFor(m => m.IdProducto, new { @class = "form-control", placeholder = "Id Categoria" })
+        </div>
+        <!--Agragamos botn tipo input para enviar el formulario-->
+        <input type="submit" class="btn btn-primary" value="Enviar" />
+    }
+
+
+</section>

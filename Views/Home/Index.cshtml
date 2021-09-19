@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!--
+<div class="text-center">
+    <h1 class="display-4">Bienvenidos</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+    -->
+<div class="jumbotron">
+    <h2 class="display-4">Bienvenidos.! Pagina Principal. </h2>
+    <p class="lead"> Proyecto seminario Web. Sistema de información Para Gestion de productos en Droguerías y Farmacias  </p>
+    <p>Shared-Learnig <a href=" https://ut.edu.co/estudiantes.html "> Visita Nuestra Aula Mater </a>.</p>
+    <!--Action link razor Boton buscar en home-->
+    @Html.ActionLink("Productos", "Producto", "Home", null, new { @class = "btn btn-primary btn-lg" })
+</div>
+
+<!--Action link Columnas en home-->
+<div class="row">
+    <div class="col-md-4">
+        <h2> Comprar </h2>
+        <p>
+            Hecho en ASP .NET
+        </p>
+
+        <p> <a class="btn btn-default" href="https://ut.edu.co/"> Ver mas &raquo; </a></p>
+    </div>
+    <div class="col-md-4">
+        <h2> Productos  </h2>
+
+        <p>
+            Hecho en ASP .NET
+        </p>
+
+        <p> <a class="btn btn-default" href="https://ut.edu.co/"> Ver mas &raquo; </a></p>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <h2>  Donativos  </h2>
+
+        <p>
+            Hecho en ASP .NET
+        </p>
+
+        <p> <a class="btn btn-default" href="https://ut.edu.co/"> Ver mas &raquo; </a></p>
+
+
+    </div>
+</div>
